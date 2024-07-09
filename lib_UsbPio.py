@@ -1,11 +1,5 @@
-import ctypes
-from ctypes.wintypes import DWORD
-import pathlib
-import os
-import time
-import ftd2xx
-from ftd2xx import FTD2XX
 import subprocess
+import time
 from subprocess import CalledProcessError, check_output
 import re
 
@@ -17,13 +11,16 @@ class UsbPio:
     def retrive_usb_channel(self, box):
         arr = str(
             check_output(r'c:\\tcl\\bin\\wish86.exe pio_usb_scr.tcl RetriveUsbChannel'),
-            'utf-8')
+            'utf-8').strip("\n\r")
+        print(f'retrive_usb_channel box:{box} arr:<{arr}>')
         lst = arr.split(" ")
+        print(f'lst:<{lst}>')
         it_lst = iter(lst)
         channel = None
-        for a in it_lst:
-            if re.search('SerialNumber', a) and next(it_lst) == box:
-                channel = a.split(',')[0]
+        for key, val in zip(lst[0::2], lst[1::2]):
+            print(f'key:{key}, val:{val}')
+            if 'SerialNumber'in key and val == box:
+                channel = key.split(',')[0]
                 # print(f'a:{a} channel:{channel}')
                 break
         return channel
@@ -52,9 +49,11 @@ class UsbPio:
         elif mode == "BusState":
             values += self.bus_state(chs)
 
-        #return values
+        #print(values)
+        values_str = ' '.join(str(x) for x in values)
+        #print(values_str)
 
-        lin = f'c:\\tcl\\bin\\wish86.exe pio_usb_scr.tcl MultiMux {channel} {port} {group} {values} "00000000"'
+        lin = f'c:\\tcl\\bin\\wish86.exe pio_usb_scr.tcl MultiMux {channel} {port} {group} "{values_str}" "00000000"'
         ret = str(check_output(lin), 'utf-8')
         return ret
 
@@ -119,10 +118,12 @@ class UsbPio:
 if __name__ == '__main__':
     pio_obj = UsbPio()
     #print(pio_obj.bus_state("A B C D"))
-
-    for mode, chs in [["AllNC", 'nc'], ['ChsCon', [1,3]],
-                      ['ChsCon', [1]], ['ChOnly', [1]], ['BusState', "A,B C,D"]]:
-        print(f'{mode},{pio_obj.mmux(1,2,3, mode, chs)}')
+    channel = pio_obj.retrive_usb_channel("FTEBG66")
+    print(f'channel:{channel}')
+    # for mode, chs in [["AllNC", 'nc'], ['ChsCon', [1,3]],
+                      # ['ChsCon', [1]], ['ChOnly', [1]], ['BusState', "A,B C,D"]]:
+        # print(f'{mode},{pio_obj.mmux(channel,1, "PORT", mode, chs)}')
+        # time.sleep(2)
 
 
 

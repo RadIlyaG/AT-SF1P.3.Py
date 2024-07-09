@@ -5,5 +5,6 @@
   "comSer1": "COM7",
   "comSer2": "COM8",
   "comSer485": "COM12",
-  "pioBoxSerNum": "FT31C999"
+  "pioBoxSerNum": "FT31C999",
+  "ip4lora": "172.18.94.181"
 }

@@ -1,24 +1,23 @@
-# tk_messageBox -message $argv
-
-
 package require RLEH
 package require RLUsbPio
+console show
 
 catch {RLEH::Close}
 RLEH::Open
 
-#tk_messageBox -message "[llength $argv] $argv"
 if {[lindex $argv 0]=="RetriveUsbChannel"} {
   set res [array get ::RLUsbPio::description]
-  puts $res
-}  else {
+} else {
   set channel [lindex $argv 1]
   set port [lindex $argv 2]
   set group [lindex $argv 3]
   set values [lindex $argv 4]
   set state [lindex $argv 5]
-#   tk_messageBox -message "$argv\n\n\
-#       channel:$channel\nport:$port\ngroup:$group\nvalues:$values\nstate:$state"  
+
+  #set msg "$argv channel:$channel\nport:$port\ngroup:$group\nvalues:$values\nstate:$state"
+  #puts $msg
+  # tk_messageBox -message "$argv\n\n\
+  #     channel:$channel\nport:$port\ngroup:$group\nvalues:$values\nstate:$state"
   set id [RLUsbPio::Open $port $group $channel]
   set res id_\'$id\'   
    

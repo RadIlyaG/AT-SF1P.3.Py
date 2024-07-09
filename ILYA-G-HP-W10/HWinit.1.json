@@ -1,9 +1,10 @@
 {
-  "comDut": "COM8",
+  "comDut": "COM1",
   "comGen1": "COM5",
-  "comGen2": "COM4",
-  "comSer1": "COM8",
-  "comSer2": "COM6",
+  "comGen2": "COM8",
+  "comSer1": "COM6",
+  "comSer2": "COM1",
   "comSer485": "COM9",
-  "pioBoxSerNum": "FT4SNHED"
+  "pioBoxSerNum": "FT7EUC3N",
+  "ip4lora": "172.18.94.180"
 }
