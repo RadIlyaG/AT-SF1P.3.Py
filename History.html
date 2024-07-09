@@ -1,0 +1,301 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+   <style type="text/css">
+    div.add {color:blue;}
+    div.fix {color:red;}
+    div.cng {color:black;}
+    a:link, a:visited {text-decoration: none; color: black;}
+    a:hover , a:active {text-decoration: underline; color: black;}
+    table {border-collapse: collapse;}
+    table, td, th {border: 0px solid black;}
+  </style>
+  <title>Changes' history</title>
+  </head>
+  <body>
+   <h4>ATE software upgrade</h4>
+  <!---->
+  <table>    
+    <tr><td>SF-1P	</td><td><a href="#74">: 21.01.2024</a></td></tr>
+    <tr><td>ETX-1P	</td><td><a href="#70">: 14.01.2024</a></td></tr>
+  </table>
+  <!----> 
+           
+  <br> 
+  <h4>Changes</h4>
+    <div id="79">03.03.2024</div>        
+      <div>Add Operator Name and Operator ID to log</div>
+    <br>
+    <div id="78">26.02.2024</div>        
+      <div>For unknown options, like L4P or L450B, organize fake tests that will fail with message <b>No Test defined for L4P</b> (Testing)<div>
+    <br>
+    <div id="77">07.02.2024</div>        
+      <div>Change timeout of <code> shutdown for lora-gateway</code> from 8 to 20 seconds</div>
+    <br>
+    <div id="76">28.01.2024</div>        
+      <div>Add new modems to Menu->Tools and arrange all lines to "Edit Modems Files"</div>
+    <br>
+    <div id="75">25.01.2024</div>        
+      <div>Second try after 2 seconds in <code>RetriveIdTraceData</code></div>
+    <br>
+    <div id="74">21.01.2024</div>        
+      <div>Add <b>TpmCheck</b> (IDPerf)</div>
+    <br>
+    <div id="73">17.01.2024</div>        
+      <div>Correct <code>CellularLte_RadOS_Sim12_Dual</code> following the FTI fix</div>
+    <br>
+    <div id="72">16.01.2024</div>        
+      <div>Add <b>HL_Security</b> Test</div>
+	  <div><code>RetriveIdTraceData returns dict and not value</code></div>
+    <br>
+   <div id="71">15.01.2024</div>        
+     <div>Add <b>Halow_WiFi</b> Test</div>
+	 <div>CellularLte_RadOS_Sim12 and CellularLte_RadOS_Sim12_Dual as FTI</div>
+   <br>
+   <div id="70">14.01.2024</div>        
+     <div>Add Revision for 5G (5G.txt)</div>
+	 <div>Add Ping from wwan1 from modem2 (CellularModemPerf_RadOS_Sim12_Dual)</div>
+	 <div>Remove <mark><a href="#61">fail on start of <b>Cellular SIM2 of Dual Modem</b></a></mark> (CellularModem_SIM2)</div>
+	 <div>Add support <b>2RSI</b></div>
+   <br>
+   <div id="69">07.01.2024</div>        
+     <div>Don't send email to Meir_Kas</div>
+   <br>
+   <div id="68">02.01.2024</div>        
+     <div>Fix use linuxPrompt</div>
+   <br>
+   <div id="67">28.12.2023</div>        
+     <div>Add support Ubuntu prompt</div>
+   <br>
+   <div id="66">27.12.2023</div>        
+     <div>Add empty <b>HL_Security</b> test. Will fail immediately</div>
+	 <div>Add <b>MicroSD</b> test for <b>HL</b> option with HW>=0.6</div>
+	 <div>Add <i>HL</i> to known fields (RetriveDutFam)</div>
+	 <div>Fail if no test to perform (ButRun, BuildTests, RetriveDutFam)</div>
+   <br>
+   <div id="65">26.12.2023</div>        
+     <div>Add <i>lanPorts</i> to known fields (RetriveDutFam)</div>
+	 <div>Add <code>*ifiReport*.txt</code> pattern to <code>-noCheckFiles</code></div>
+   <br>
+   <div id="64">25.12.2023</div>        
+     <div>Extract <b>Check Sim Out</b> to SIM-2</div>
+	 <div>Add ability to check RS-485 on GUI 2</div>
+	 <div>Check if all fields of DBR name are known (RetriveDutFam)</div>
+	 <div>Remove some options from RetriveDutFam</div>
+   <br>
+   <div id="63">24.12.2023</div>        
+     <div>Fail on Firmware check of <b>L450B</b> with message <i>Bad FTI for this option</i></div>
+   <br>
+   <div id="62">20.12.2023</div>        
+     <div>Add <b>Check Sim Out</b> in <i>Factory_Settings</i></div>
+   <br>
+   <div id="61">14.12.2023</div>        
+     <div>Fail on start of <b>Cellular SIM2 of Dual Modem</b> with message <i>Bad FTI for this option</i></div>
+   <br>
+   <div id="60">23.11.2023</div>        
+     <div>Cleanup code</div>
+	 <div>Adjust to new FTI</div>
+   <br>
+   <div id="59">21.11.2023</div>        
+     <div>Warning message at start if Demo (GUI)</div>
+   <br>
+   <div id="58">20.11.2023</div>        
+     <div>UnregIdBarcode if Demo (GetDbrSW)</div>
+   <br>
+   <div id="57">19.11.2023</div>        
+     <div>UnregIdBarcode on Failure</div>
+   <br>
+   <div id="56">15.11.2023</div>        
+     <div><b>Demo</b></div>
+   <br>
+   <div id="55">09.11.2023</div>        
+     <div>Support <b>L4P</b></div>
+   <br>
+   <div id="54">06.11.2023</div>        
+     <div>Support <b>SF-1P_ANG</b></div>
+	 <div>Prepare support <b>WFH</b> or <b>WH</b></div>
+   <br>
+   <div id="53">02.11.2023</div>        
+      <div>Prepare <code>UnregIdBarcode</code></div>
+   <br>  
+   <div id="52">01.11.2023</div>        
+      <div>Add <code>start_Measurement_xxx</code> file at "without antenna" loop's begining in WiFi Test</div>
+	  <div>"Without Antenna" step of WiFi Test compares Signal Level to "With Antenna" step's</div>
+	  <div>Add 10 sec waiting period during ping to 8.8.8.8 (CellularModemPerf_RadOS_Sim12, CellularModemPerf_RadOS_Sim12_Dual)</div>
+   <br> 
+   <div id="51">30.10.2023</div>        
+      <div>Add second <code>no shutdown</code> during <b>interface(1)</b> configuration in WiFi Test</div>
+	  <div>Delete <code>start_Measurement_xxx</code> file during "without antenna" loop in WiFi Test</div>
+   <br> 
+   <div id="50">24.10.2023</div>        
+      <div>Limited <b>HW</b> and <b>SFP</b> testing for 5.0.1.229.5</div>
+   <br> 
+   <div id="49">23.10.2023</div>        
+      <div><b>CellularModem</b> for <b>5.0.1.229.5</b></div>
+   <br> 
+   <div id="48">22.10.2023</div>        
+      <div>Save IMEI details to IMEI DB</div>
+	  <div>Support <b>ETX-1P_SFC</b></div>
+   <br> 
+   <div id="47">18.10.2023</div>        
+      <div>No Eeprom on ETX-1P</div>
+   <br> 
+   <div id="46">09.10.2023</div>        
+      <div><code>RetriveIdTraceData $IdBarcode CSLByBarcode</code> and <code>RetriveIdTraceData $traceId PCBTraceabilityIDData</code> instead of <b>Tools-Inventory</b></div>
+   <br> 
+   <div id="45">04.10.2023</div>        
+      <div>Report to TCC even MacReg was performed early (SQliteAddLine)</div>
+   <br> 
+   <div id="44">23.08.2023</div>        
+     <div>Config WiFi password with and without hash</div>
+   <br>            
+   <div id="43">06.08.2023</div>        
+     <div>Change ETX-1P's date according to DR86209</div>
+   <br>            
+   <div id="42">03.08.2023</div>        
+     <div>Configurate DryContact according to HWver and not SWver</div>
+   <br>            
+   <div id="41">01.08.2023</div>        
+     <div>Support <b>SF-1P_ICE/E1/DC/4U2S/2RS</b></div>
+   <br>            
+   <div id="40">17.07.2023</div>        
+     <div>Stop the Tester if ShutDown fails</div>
+   <br>            
+   <div id="39">29.06.2023</div>        
+     <div>Remove <b>WiFi 5G</b> Test</div>
+   <br>            
+   <div id="38">28.06.2023</div>        
+     <div>Use ':' instead of '.' as separator in time field of the TCC's log</div>
+   <br>            
+   <div id="37">15.06.2023</div>        
+     <div>Different DryContact's scripts for <b>5.2.x.x</b> and <b>5.4.x.x</b></div>
+   <br>            
+   <div id="36">11.06.2023</div>        
+     <div>Support Dual Modem, not L4</div>
+   <br>            
+   <div id="35">16.05.2023</div>        
+     <div>Check <b>Model</b> according to <code>gaSet(mainHW)</code> and not <code>gaSet(DutInitName)</code> (IDPerf)</div>
+   <br>            
+   <div id="34">15.05.2023</div>        
+     <div>Add <code>hash</code> for WiFi password (WifiPerf)</div>
+	 <div>Extend <b>usb tree</b> for L450A and L450B (UsbStartTreePerform)</div>
+	 <div><b>MicroSD Test</b> is checking <b>Capacity</b> instead of <b>Bus Width</b>(MicroSDPerform)</div>
+	 <div>Create separate log file if use existing barcode(CheckBcOk)</div>
+   <br>            
+   <div id="33">14.05.2023</div>        
+     <div>Remove <span style="background-color:yellow">Debug</span> when an ID barcode has scanned (GetDbrName)</div>
+     <div>Adaptations for 485</div>	 
+	 <div>No BrdEeprom Test for SFP</div>	
+   <br>            
+   <div id="32">11.05.2023</div>        
+     <div>No BrdEeprom in SFP (BuildTests)</div>
+	 <div>::sendSlow 0||1 (Send)</div>
+   <br>            
+   <div id="31">17.04.2023</div>        
+     <div>Start work with Git</div>
+   <br>            
+   <div id="30">20.03.2023</div>        
+     <div>L4 Support</div>
+   <br>            
+   <div id="29">13.03.2023</div>        
+     <div>EEPROM entries <b>WDC-I</b> and <b>12V-I</b> for <b>marketing WDC</b> and <b>marketing 12V</b> (BuildEepromString)</div>
+   <br>            
+   <div id="28">27.02.2023</div>        
+     <div>Add <b>HW Addition</b> and <b>Sub-1 Card</b> to Gui_Inventory </div>
+	 <div>Add <b>HW Addition</b> and <b>Sub-1 Card</b> into Eeprom for Main HW = 0.6 </div>
+   <br>            
+   <div id="27">05.02.2023</div>        
+     <div>Join AT code for SF-1p and ETX-1p </div>
+   <br>            
+   <div id="26">02.02.2023</div>        
+     <div>Add <b>LoRa</b> Test</div>
+   <br>            
+   <div id="25">28.12.2022</div>        
+     <div>Add <b>PowerOffOn Test</b></div>
+   <br>            
+   <div id="24">12.12.2022</div>        
+     <div>WiFi 5G is tested now in channel 36</div>
+   <br>            
+   <div id="23">22.11.2022</div>        
+     <div>Verify MAC even just read it (IDPerf)</div>
+   <br>            
+   <div id="22">29.09.2022</div>        
+     <div>SF-1p: Add <i>sudo rm -r /USERFS/eeprom/*</i> in eeprom programming process (BrdEepromPerf)</div>
+   <br>            
+   <div id="21">22.09.2022</div>        
+     <div>SF-1p: Add Cellular option <i>L450A</i></div>
+   <br>            
+   <div id="20">15.09.2022</div>        
+     <div>SF-1p: <i>eeprom.[set gaSet(pair)].cnt</i> instead of <i>eeprom.cnt</i></div>
+   <br>            
+   <div id="19">13.07.2022</div>        
+     <div>SF-1p: Read <i>armada-3720-SF1p_superSet_hl.dtb</i> for HL option (ReadBootParams)</div>
+   <br>            
+   <div id="18">10.07.2022</div>        
+     <div>SF-1p: Add GPS test even LORA interface is existing</div>
+	 <div>SF-1p: HL option doesn't have MicroSD (BuildTests, BuildEepromString)</div>
+	 <div>SF-1p: Add 2 tries to see <i>scanning bus 0 for devices</i> in UsbTree Test</div>
+	 <div>SF-1p: Front Leds are checked without loop (BootLedsPerf)</div>
+   <br>        
+   <div id="17">23.06.2022</div>        
+     <div>ID test checks RAM size and Boot Version according to ID Barcode</div>
+   <br>            
+   <div id="16">25.05.2022</div>        
+     <div>SF-1p: DataSetup is performing at Linux level, not RAD_OS</div>
+	 <div>SF-1p: Console works in SSH mode, no need check it disabled (SshPerform)</div>
+	 <div>ETX-1p: ParseSW done by gaSet(DutInitName) and not gaSet(SWver)</div>
+   <br>            
+   <div id="15">13.02.2022</div>        
+     <div>No BAND check in Cellular Test</div>
+   <br>            
+   <div id="1">31.01.2022</div>        
+     <div>ATP</div>
+   <br>            
+   <div id="13">25.01.2022</div>        
+     <div>Admin Factory instead of reboot after EEPROM</div>
+   <br>            
+   <div id="12">24.01.2022</div>        
+     <div>Added: GPS, Serial</div>
+	 <div>Changed: Eeprom, ID, Cellular</div>
+	 <div>ETX-1p: DATA test from Linux</div>
+   <br>
+   <div id="11">06.12.2021</div>        
+     <div>HW version changed from combobox to entry (GuiInventory)</div>
+   <br>  
+   <div id="10">09.08.2021</div>        
+     <div>New Tester of SF-1p</div>
+   <br>
+   <div id="9">04.08.2021</div>        
+     <div>New FTI</div>
+   <br>            
+   <div id="8">08.06.2021</div>        
+     <div>::RadAppsPath instead of C:/RadApps</div>
+     <div>Preparations in lib_bc.tcl for new MacReg (with 2 MACs) </div>
+   <br>            
+   <div id="7">19.04.2021</div>        
+     <div>GetMac provides to UUT a MAC from MacServer as is</div>
+   <br>    
+   <div id="6">02.03.2021</div>        
+     <div>Change _ to / in Model</div>
+   <br>      
+   <div id="5">22.02.2021</div>        
+     <div>Remove current_platform.json if UUT is not Safari</div>
+   <br> 
+   <div id="4">06.01.2021</div>        
+     <div>GetOperator reads Employee ID</div>
+   <br>
+   <div id="3">17.11.2020</div>        
+     <div>Read IMEI and insert it to DBR</div>
+     <div>Add configurations in Cellular Test</div>
+   <br>
+   <div id="2">11.10.2020</div>        
+     <div>Reduce 1 from UUT's MAC</div>
+   <br>
+   <div id="1">16.09.2020</div>        
+     <div>New Tester of ETX-1p</div>
+   <br>
+   
+  </body>
+</html>

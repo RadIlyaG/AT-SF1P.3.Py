@@ -1,0 +1,9 @@
+{
+  "comDut": "COM7",
+  "comGen1": "COM10",
+  "comGen2": "COM9",
+  "comSer1": "COM7",
+  "comSer2": "COM8",
+  "comSer485": "COM12",
+  "pioBoxSerNum": "FT31C999"
+}
